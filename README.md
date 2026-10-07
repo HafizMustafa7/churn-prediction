@@ -16,7 +16,7 @@
   <b>76% churn recall</b> &nbsp;•&nbsp; <b>0.84 ROC-AUC</b> &nbsp;•&nbsp; <b>Leakage-safe pipeline</b> &nbsp;•&nbsp; <b>Real-time REST inference</b>
 </p>
 
-<img src="images/pipeline.png" alt="End-to-end pipeline" width="100%"/>
+<img src="image/pipeline.png" alt="End-to-end pipeline" width="100%"/>
 
 </div>
 
@@ -40,7 +40,7 @@ I trained and compared four model families, tuned them with cross-validation, an
 ## 🔍 Exploratory Insights
 
 <div align="center">
-  <img src="images/eda.png" alt="EDA plots" width="100%"/>
+  <img src="image/eda.png" alt="EDA plots" width="100%"/>
 </div>
 
 - **Contract type** is the strongest signal: month-to-month customers churn far more than those on one- or two-year plans.
@@ -79,7 +79,7 @@ All numbers are measured on the **held-out test set (1,407 customers, 374 churne
 | **🏆 Final: LR (tuned) + threshold 0.30** | 0.741 | 0.509 | **0.759** | 0.609 | 0.835 |
 
 <div align="center">
-  <img src="images/model_comparison.png" alt="Model comparison" width="100%"/>
+  <img src="image/model_comparison.png" alt="Model comparison" width="100%"/>
 </div>
 
 ### 💡 Key takeaways
@@ -93,13 +93,13 @@ All numbers are measured on the **held-out test set (1,407 customers, 374 churne
 The threshold was selected from 5-fold cross-validated predictions on the training data, never the test set.
 
 <div align="center">
-  <img src="images/threshold_tradeoff.png" alt="Threshold trade-off" width="85%"/>
+  <img src="image/threshold_tradeoff.png" alt="Threshold trade-off" width="85%"/>
 </div>
 
 ### 🧮 What the threshold change means in practice
 
 <div align="center">
-  <img src="images/confusion_matrices.png" alt="Confusion matrices before and after threshold tuning" width="85%"/>
+  <img src="image/confusion_matrices.png" alt="Confusion matrices before and after threshold tuning" width="85%"/>
 </div>
 
 At threshold 0.30 the model catches **71 more churners** (284 vs. 213) at the cost of 154 extra false alarms. Accuracy drops from 80% to 74%, but for churn a wasted retention offer is far cheaper than a lost customer. ROC-AUC is unchanged because it does not depend on the threshold.

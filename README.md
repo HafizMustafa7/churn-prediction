@@ -110,7 +110,7 @@ At threshold 0.30 the model catches **71 more churners** (284 vs. 213) at the co
 
 ```bash
 # 1. Clone
-git clone https://github.com/<your-username>/churn-prediction.git
+git clone https://github.com/<HafizMustafa7>/churn-prediction.git
 cd churn-prediction
 
 # 2. Create and activate a virtual environment
